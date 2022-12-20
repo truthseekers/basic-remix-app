@@ -36,7 +36,7 @@ export default function Index() {
       <h1>Welcome to Remix</h1>
 
       <article>
-        <h2>Blog Posts</h2>
+        <h2>Learn To Code Page!!!</h2>
         <h3>Welcome to my blog posts page!</h3>
         <div>
           {/* @ts-ignore */}

@@ -1,0 +1,5 @@
+Really strange but they suggest installing @sanity/client globally? and then to import it into the project. Never seen that done before.
+https://www.sanity.io/docs/js-client
+
+
+used this to cobble together a working version: https://github.com/SimeonGriggs/remix-sanity-studio-v3
