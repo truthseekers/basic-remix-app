@@ -3,3 +3,9 @@ https://www.sanity.io/docs/js-client
 
 
 used this to cobble together a working version: https://github.com/SimeonGriggs/remix-sanity-studio-v3
+
+https://remix.run/tutorials/blog
+
+https://remix.run/tutorials/jokes
+
+https://remix.run/docs

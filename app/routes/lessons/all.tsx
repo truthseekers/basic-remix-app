@@ -3,8 +3,6 @@ import type { LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { getClient } from "~/sanity/client";
 import { useLoaderData } from "@remix-run/react";
-import Layout from "~/components/Layout";
-import Image from "remix-image";
 
 export const loader = async (props: LoaderArgs) => {
   const query = groq`*[_type == "post"]{
@@ -17,6 +15,7 @@ export const loader = async (props: LoaderArgs) => {
             }
         }
     }`;
+  console.log("fuuuuck is this?");
 
   const posts = await getClient()
     .fetch(query)
@@ -34,20 +33,39 @@ export default function Index() {
   console.log("posts: ", posts);
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <Layout>
-        <Image
-          src="/images/profile.jpg"
-          className=""
-          style={{ borderRadius: "9999px", height: "144px", width: "144px" }}
-        />
-        <h1>John Curry</h1>
+      <h1>Welcome to Remix</h1>
 
-        <article>
-          <h2>Index page</h2>
-          <h3>Welcome to my Index page!</h3>
-          <div></div>
-        </article>
-      </Layout>
+      <article>
+        <h2>LESSONS All Page! Fucking piece of shit</h2>
+        <h3>Welcome to my blog posts page!</h3>
+        <div></div>
+      </article>
+
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://remix.run/tutorials/blog"
+            rel="noreferrer"
+          >
+            15m Quickstart Blog Tutorial
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://remix.run/tutorials/jokes"
+            rel="noreferrer"
+          >
+            Deep Dive Jokes App Tutorial
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
+            Remix Docs
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 
-export default function Layout({ children }) {
+export default function ShopLayout({ children }) {
   return (
     <>
       <nav
@@ -13,13 +13,13 @@ export default function Layout({ children }) {
       >
         <ul>
           <Link to="/" style={{ padding: "10px" }}>
-            Home
+            Shop version
           </Link>
           <Link to="/blog" style={{ padding: "10px" }}>
-            Blog
+            lala
           </Link>
           <Link t0="/learn-to-code" style={{ padding: "10px" }}>
-            Learn
+            yo
           </Link>
         </ul>
       </nav>

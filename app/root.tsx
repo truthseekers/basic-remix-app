@@ -10,6 +10,7 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 import groq from "groq";
+import styles from "~/styles/global.css";
 
 import { getClient } from "~/sanity/client";
 
@@ -20,7 +21,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: "preconnect", href: "https://cdn.sanity.io" }];
+  return [
+    { rel: "preconnect", href: "https://cdn.sanity.io" },
+    { rel: "stylesheet", href: styles },
+  ];
 };
 
 export const loader = async ({ request }: LoaderArgs) => {
